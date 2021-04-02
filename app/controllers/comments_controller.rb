@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     if @comment.save
       redirect_to prototype_path(@comment.prototype)
+      # ↑Prefixでパスを指定することが望ましい。 @prototype = Prototype.find(params[:prototype_id])
     else
       @prototype = @comment.prototype
       @comments = @prototype.comments
