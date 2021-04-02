@@ -18,6 +18,9 @@ class PrototypesController < ApplicationController
 
   def show
     @prototype = Prototype.find(params[:id])
+    @comment = Comment.new
+    #↓ただの @comments = @prototype.comments.all のN+１問題解決版
+    @comments = @prototype.comments.includes(:user)
   end
 
   def edit
