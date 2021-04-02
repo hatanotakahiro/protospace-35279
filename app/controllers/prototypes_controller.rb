@@ -1,5 +1,6 @@
 class PrototypesController < ApplicationController
   def index
+    @prototypes = Prototype.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -11,7 +12,6 @@ class PrototypesController < ApplicationController
     if @prototype.save
       redirect_to root_path
     else
-      # @prototype = Prototype.new
       render :new
     end
   end
