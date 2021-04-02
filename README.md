@@ -37,9 +37,9 @@
 | --------- | ---------- | ------------------------------ |
 | text      | text       | null: false |
 | user      | references | null: false, foreign_key: true |
-| pritotype | references | null: false, foreign_key: true |
+| prototype | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :pritotype
+- belongs_to :prototype
 - belongs_to :user
