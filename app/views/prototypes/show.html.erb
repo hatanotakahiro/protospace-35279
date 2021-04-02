@@ -12,7 +12,7 @@
         </div>
       <% end %>
       <div class="prototype__image">
-        <%= image_tag @prototype.image %>
+        <%= image_tag @prototype.image.variant(resize: '500x500') %>
       </div>
       <div class="prototype__body">
         <div class="prototype__detail">
